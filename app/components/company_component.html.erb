@@ -1,0 +1,10 @@
+<div id="<%= dom_id @company %>">
+  <p>
+    <strong>Name:</strong>
+    <%= @company.name %>
+    <%= link_to "Edit this company", [:edit, @company] %> |
+    <%= link_to "Back to companies", :companies %>
+    <%= button_to "Destroy this company", @company, method: :delete %>
+  </p>
+
+</div>

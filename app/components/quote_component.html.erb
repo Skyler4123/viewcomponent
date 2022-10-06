@@ -1,0 +1,7 @@
+<div id="<%= dom_id @quote %>">
+    <%= tag.turbo_frame(id: dom_id(@quote)) do %>
+      <%= link_to @quote.name, @quote, data: { turbo_frame: "_top" } %>
+      <%= link_to "Edit this quote", [:edit, @quote] %>
+      <%= button_to "Delete this quote", @quote, method: :delete %>
+    <% end %>
+</div>

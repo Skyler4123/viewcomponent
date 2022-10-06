@@ -1,0 +1,9 @@
+    <% if signed_in? %>
+      <%= current_user.email %>
+      <%= current_company.name %>
+      <%= button_to "Sign out", signout_path, method: :delete %>
+      <%= button_to "View quotes", quotes_path, method: :get %>
+    <% else %>
+      <%= button_to "Sign In", signin_path, method: :get %>
+      <%= button_to "Sign Up", signup_path, method: :get %>
+    <% end %>

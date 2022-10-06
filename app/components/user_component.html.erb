@@ -1,0 +1,9 @@
+<div id="<%= dom_id @user %>">
+  <p>
+    <strong>Email:</strong>
+    <%= link_to @user.email, @user %>
+    <%= link_to "Edit this user", [:edit, @user] %>
+    <%= link_to "Back to users", :users %>
+    <%= button_to "Destroy this user", @user, method: :delete %>
+  </p>
+</div>
